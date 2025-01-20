@@ -24,7 +24,7 @@ const categoriesSchema = new Schema({
             'Shopping', 
             'Miscellaneous'
         ],
-        require: true
+        required: true
     }
 },
 { versionKey: false }); // Disable __v field

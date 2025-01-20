@@ -10,12 +10,12 @@ const transactionsSchema = new Schema({
     },
     type: {
         type: String,
-        enum: ['income', 'expenses'],
-        require: true
+        enum: ['income', 'expense'],
+        required: true
     },
     amount: {
         type: Number,
-        require: true
+        required: true
     },
 
     category: {
@@ -34,17 +34,17 @@ const transactionsSchema = new Schema({
             'Shopping', 
             'Miscellaneous'
         ],
-        require: true
+        required: true
     },
 
     date: {
         type: String, //Not Date so i don't get the full time and stuff, this was a cheap way of doing it, I don't know if smart one too
-        require: true
+        required: true
     },
 
     description: {
         type: String,
-        require: false
+        required: false
     },
 },
 { versionKey: false }); // Disable __v field
